@@ -11,7 +11,7 @@ agentic systems in AI competitions, always solo.
 
 | Result | Competition | Project |
 |---|---|---|
-| **3rd of 850+ teams** | Google MedGemma Impact Challenge 2026 | [FieldScreen AI](https://github.com/Marc-Dvci/FieldScreen_AI) · [writeup](https://www.kaggle.com/competitions/med-gemma-impact-challenge/writeups/fieldscreen-ai) · [Google blog]([URL]) |
+| **3rd of 850+ teams** | Google MedGemma Impact Challenge 2026 | [FieldScreen AI](https://github.com/Marc-Dvci/FieldScreen_AI) · [writeup](https://www.kaggle.com/competitions/med-gemma-impact-challenge/writeups/fieldscreen-ai) · [Google blog]((https://blog.google/innovation-and-ai/technology/health/med-gemma-impact-challenge/)) |
 | **Winner, EdgeAgent track** | Global AI Hackathon with Qwen Cloud (Alibaba Cloud) | [LUMEN](https://github.com/Marc-Dvci/LUMEN) · [demo](https://youtu.be/h8hPsUjZMuU) |
 | **Finalist, 1 of 6** | European Patent Office CodeFest 2026 | IP Value Framework |
 | **2nd place, Pro category** | Euro-Information Concours de Code 2025 (Python, C++) | |
