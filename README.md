@@ -29,13 +29,11 @@ agentic systems in AI competitions, always solo.
 **Governed agents for regulated work**
 - [AssuranceOS](https://github.com/Marc-Dvci/AssuranceOS): an internal-audit platform run by 19 governed
   agents on Gemini. Signed releases, a default-deny tool gateway and evidence validation.
-  [Live demo](https://assuranceos-explorer-91995351602.us-central1.run.app)
 - [Lore](https://github.com/Marc-Dvci/Lore): a permission and lineage control plane for archival media
   on ClickHouse. Every query family answers in under 33 ms at p99 on 300M rows.
-  [Live](https://lore-941845473488.europe-west1.run.app)
 - [Threshold](https://github.com/Marc-Dvci/Threshold): several care organisations answer one person's
   AI assistant through WebMCP and compose a single plan.
-  [Live](https://threshold-hub.onrender.com) · [Video](https://youtu.be/J_AyAdoT05I)
+ [Video](https://youtu.be/J_AyAdoT05I)
 
 **Performance and systems**
 - [fastpath64](https://github.com/Marc-Dvci/fastpath64): an Arm `smmla` kernel for IQ4_XS in llama.cpp.
