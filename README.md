@@ -5,7 +5,7 @@ I take generative AI from a business problem to production: six solutions shippe
 500-person function, with 80%+ regular usage. Outside work I build offline, multimodal and
 agentic systems in AI competitions, always solo.
 
-[LinkedIn](https://linkedin.com/in/marc-donovici) · marcdonovici@gmail.com
+[LinkedIn](https://linkedin.com/in/marc-donovici)
 
 ## Results
 
