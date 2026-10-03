@@ -3,7 +3,7 @@
 AI implementation lead for Group Internal Audit at Crédit Mutuel Alliance Fédérale in Strasbourg.
 I take generative AI from a business problem to production: six solutions shipped to a
 500-person function, with 80%+ regular usage. Outside work I build offline, multimodal and
-agentic systems in AI competitions, always solo.
+agentic systems in AI competitions.
 
 [LinkedIn](https://linkedin.com/in/marc-donovici)
 
