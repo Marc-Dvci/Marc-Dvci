@@ -16,6 +16,7 @@ agentic systems in AI competitions.
 | **Finalist, 1 of 6** | European Patent Office CodeFest 2026 | IP Value Framework |
 | **2nd place, Pro category** | Euro-Information Concours de Code 2025 (Python, C++) |
 | **2nd place, Good Neighbor Agents track** | AWS Agents for Humans Hackathon 2026 | [On the Line](https://github.com/Marc-Dvci/On-the-Line) |
+| **2nd place, Grafana track** | Agentic Cinema: The Blockbuster Hackathon | [Raccord](https://github.com/Marc-Dvci/Raccord) |
 | **Honorable mention** | Tesseract 2026 Hackathon | [Vitrify](https://github.com/Marc-Dvci/Vitrify) | |
 
 ## Selected projects
