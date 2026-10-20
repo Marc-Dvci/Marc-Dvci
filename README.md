@@ -18,6 +18,7 @@ agentic systems in AI competitions.
 | **2nd place, Good Neighbor Agents track** | AWS Agents for Humans Hackathon 2026 | [On the Line](https://github.com/Marc-Dvci/On-the-Line) |
 | **2nd place, Grafana track** | Agentic Cinema: The Blockbuster Hackathon | [Raccord](https://github.com/Marc-Dvci/Raccord) |
 | **Honorable mention** | Tesseract 2026 Hackathon | [Vitrify](https://github.com/Marc-Dvci/Vitrify) | |
+| **Finalist** | AI4S Open Innovation: AI for Life Science, 5th Pazhou Algorithm Competition | [Hodgkin's Razor](https://github.com/Marc-Dvci/Hodgkin-s-Razor) · [demo](https://marc-dvci.github.io/Hodgkin-s-Razor/) |
 
 ## Selected projects
 
