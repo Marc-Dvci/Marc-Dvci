@@ -13,12 +13,12 @@ agentic systems in AI competitions.
 |---|---|---|
 | **3rd of 850+ teams** | Google MedGemma Impact Challenge 2026 | [FieldScreen AI](https://github.com/Marc-Dvci/FieldScreen_AI) · [writeup](https://www.kaggle.com/competitions/med-gemma-impact-challenge/writeups/fieldscreen-ai) · [Google blog](https://blog.google/innovation-and-ai/technology/health/med-gemma-impact-challenge/) |
 | **Winner, EdgeAgent track** | Global AI Hackathon with Qwen Cloud (Alibaba Cloud) | [LUMEN](https://github.com/Marc-Dvci/LUMEN) · [demo](https://youtu.be/h8hPsUjZMuU) |
+| **3rd place** | AI4S Open Innovation: AI for Life Science, 5th Pazhou Algorithm Competition | [Hodgkin's Razor](https://github.com/Marc-Dvci/Hodgkin-s-Razor) · [demo](https://marc-dvci.github.io/Hodgkin-s-Razor/) |
 | **Finalist, 1 of 6** | European Patent Office CodeFest 2026 | IP Value Framework |
 | **2nd place, Pro category** | Euro-Information Concours de Code 2025 (Python, C++) |
 | **2nd place, Good Neighbor Agents track** | AWS Agents for Humans Hackathon 2026 | [On the Line](https://github.com/Marc-Dvci/On-the-Line) |
 | **2nd place, Grafana track** | Agentic Cinema: The Blockbuster Hackathon | [Raccord](https://github.com/Marc-Dvci/Raccord) |
 | **Honorable mention** | Tesseract 2026 Hackathon | [Vitrify](https://github.com/Marc-Dvci/Vitrify) | |
-| **Finalist** | AI4S Open Innovation: AI for Life Science, 5th Pazhou Algorithm Competition | [Hodgkin's Razor](https://github.com/Marc-Dvci/Hodgkin-s-Razor) · [demo](https://marc-dvci.github.io/Hodgkin-s-Razor/) |
 
 ## Selected projects
 
