@@ -11,21 +11,21 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
 from projects import CLUSTERS
 
-# result, project, competition, domain key (see projects.CLUSTERS)
+# result, participants (when known), project, competition, domain key (see projects.CLUSTERS)
 RESULTS = [
-    ("3rd of 850+ teams", "FieldScreen AI", "Google MedGemma Impact Challenge", "health"),
-    ("Winner, EdgeAgent track", "LUMEN", "Global AI Hackathon with Qwen Cloud", "health"),
-    ("3rd place", "Hodgkin's Razor", "AI4S Open Innovation · Pazhou Algorithm Competition", "science"),
-    ("2nd place", "On the Line", "AWS Agents for Humans · Good Neighbor Agents", "agents"),
-    ("2nd place", "Raccord", "Agentic Cinema · Grafana track", "agents"),
-    ("4th of 368", "Poker coordination detector", "Detect Suspicious Value Transfers in Poker", "ml"),
-    ("Finalist, 1 of 5", "OrbitE", "TII OrbitSight Challenge", "ml"),
-    ("Finalist, 1 of 6", "IP Value Framework", "European Patent Office CodeFest", "controls"),
-    ("2nd place, Pro", "Python and C++", "Euro-Information Concours de Code", "systems"),
-    ("Honorable mention", "Vitrify", "Tesseract Hackathon", "science"),
+    ("3rd place", "850+ teams", "FieldScreen AI", "Google MedGemma Impact Challenge", "health"),
+    ("Winner, EdgeAgent track", "8k participants", "LUMEN", "Global AI Hackathon with Qwen Cloud", "health"),
+    ("3rd place", None, "Hodgkin's Razor", "AI4S Open Innovation · Pazhou Algorithm Competition", "science"),
+    ("2nd place", "9k participants", "On the Line", "AWS Agents for Humans · Good Neighbor Agents", "agents"),
+    ("2nd place", "10k participants", "Raccord", "Agentic Cinema · Grafana track", "agents"),
+    ("4th place", "368 competitors", "Poker coordination detector", "Detect Suspicious Value Transfers in Poker", "ml"),
+    ("Finalist, 1 of 5", None, "OrbitE", "TII OrbitSight Challenge", "ml"),
+    ("Finalist, 1 of 6", None, "IP Value Framework", "European Patent Office CodeFest", "controls"),
+    ("2nd place, Pro", None, "Python and C++", "Euro-Information Concours de Code", "systems"),
+    ("Honorable mention", None, "Vitrify", "Tesseract Hackathon", "science"),
 ]
-W, H = 880, 290
-CARD_W, CARD_H = 300, 196
+W, H = 880, 306
+CARD_W, CARD_H = 300, 222
 STEP_S = 3.2          # seconds per card (move + hold)
 MOVE = 0.28           # share of each step spent turning
 RADIUS = 470
@@ -52,11 +52,11 @@ def keyframes(n):
     return "@keyframes ring{" + "".join(frames) + "}"
 
 
-def card(i, n, result, project, comp, domain):
+def card(i, n, result, crowd, project, comp, domain):
     label, color = CLUSTERS[domain]
     delay = -((n - i) % n) * STEP_S      # the next card waits on the right
     return f"""<div class="card" style="--c:{color};--t:{color}1c;animation-delay:{delay:.2f}s">
-<div class="dom"><span></span>{escape(label)}</div><div class="res">{escape(result)}</div><div class="proj">{escape(project)}</div><div class="comp">{escape(comp)}</div></div>"""
+<div class="dom"><span></span>{escape(label)}</div><div class="res">{escape(result)}</div>{f'<div class="crowd">{escape(crowd)}</div>' if crowd else ''}<div class="proj">{escape(project)}</div><div class="comp">{escape(comp)}</div></div>"""
 
 
 def svg():
@@ -75,12 +75,13 @@ border:1px solid #30363d;box-shadow:0 16px 40px #000c;overflow:hidden;animation:
 .dom{{display:flex;align-items:center;gap:9px;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--c)}}
 .dom span{{width:9px;height:9px;border-radius:1px;background-color:var(--c)}}
 .res{{margin-top:16px;font-size:27px;font-weight:700;letter-spacing:-.01em;color:#f0f6fc;line-height:1.15}}
-.proj{{margin-top:10px;font-size:18px;font-weight:600;color:#e6edf3}}
+.crowd{{margin-top:6px;font-size:13px;font-weight:600;letter-spacing:.04em;color:#8b949e}}
+.proj{{margin-top:12px;font-size:18px;font-weight:600;color:#e6edf3}}
 .comp{{margin-top:6px;font-size:14px;line-height:1.4;color:#8b949e}}
 {keyframes(n)}
 @media (prefers-reduced-motion:reduce){{.card{{animation-play-state:paused}}}}
 """
-    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-label="Competition results: {escape('; '.join(r[0] + ', ' + r[1] for r in RESULTS))}">
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-label="Competition results: {escape('; '.join(r[0] + (f' ({r[1]})' if r[1] else '') + ', ' + r[2] for r in RESULTS))}">
 <foreignObject width="{W}" height="{H}"><div xmlns="http://www.w3.org/1999/xhtml" class="stage"><style>{css}</style>
 <div class="world"><div class="ring">
 {cards}

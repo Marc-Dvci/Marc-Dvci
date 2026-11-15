@@ -1,34 +1,35 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="880" height="290" viewBox="0 0 880 290" role="img" aria-label="Competition results: 3rd of 850+ teams, FieldScreen AI; Winner, EdgeAgent track, LUMEN; 3rd place, Hodgkin&#x27;s Razor; 2nd place, On the Line; 2nd place, Raccord; 4th of 368, Poker coordination detector; Finalist, 1 of 5, OrbitE; Finalist, 1 of 6, IP Value Framework; 2nd place, Pro, Python and C++; Honorable mention, Vitrify">
-<foreignObject width="880" height="290"><div xmlns="http://www.w3.org/1999/xhtml" class="stage"><style>
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="306" viewBox="0 0 880 306" role="img" aria-label="Competition results: 3rd place (850+ teams), FieldScreen AI; Winner, EdgeAgent track (8k participants), LUMEN; 3rd place, Hodgkin&#x27;s Razor; 2nd place (9k participants), On the Line; 2nd place (10k participants), Raccord; 4th place (368 competitors), Poker coordination detector; Finalist, 1 of 5, OrbitE; Finalist, 1 of 6, IP Value Framework; 2nd place, Pro, Python and C++; Honorable mention, Vitrify">
+<foreignObject width="880" height="306"><div xmlns="http://www.w3.org/1999/xhtml" class="stage"><style>
 *{box-sizing:border-box;margin:0;padding:0}
-.stage{width:880px;height:290px;overflow:hidden;position:relative;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;background-color:#0b0f17;
+.stage{width:880px;height:306px;overflow:hidden;position:relative;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;background-color:#0b0f17;
 background-image:radial-gradient(ellipse 45% 60% at 50% 50%,#151c2b,transparent)}
 .world{position:absolute;left:50%;top:50%;perspective:1300px;perspective-origin:50% 40%}
 .ring{position:absolute;transform-style:preserve-3d;transform:translateZ(-470px)}
-.card{position:absolute;left:-150px;top:-98px;width:300px;height:196px;border-radius:4px;padding:20px 24px;
+.card{position:absolute;left:-150px;top:-111px;width:300px;height:222px;border-radius:4px;padding:20px 24px;
 background-color:#0d1117;background-image:radial-gradient(130% 100% at 0% 0%,var(--t),transparent 60%);
 border:1px solid #30363d;box-shadow:0 16px 40px #000c;overflow:hidden;animation:ring 32.0s cubic-bezier(.65,0,.35,1) infinite}
 .dom{display:flex;align-items:center;gap:9px;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--c)}
 .dom span{width:9px;height:9px;border-radius:1px;background-color:var(--c)}
 .res{margin-top:16px;font-size:27px;font-weight:700;letter-spacing:-.01em;color:#f0f6fc;line-height:1.15}
-.proj{margin-top:10px;font-size:18px;font-weight:600;color:#e6edf3}
+.crowd{margin-top:6px;font-size:13px;font-weight:600;letter-spacing:.04em;color:#8b949e}
+.proj{margin-top:12px;font-size:18px;font-weight:600;color:#e6edf3}
 .comp{margin-top:6px;font-size:14px;line-height:1.4;color:#8b949e}
 @keyframes ring{0.000%{transform:rotateY(0.00deg) translateZ(470px);opacity:1.000;filter:brightness(1.00)}7.200%{transform:rotateY(0.00deg) translateZ(470px);opacity:1.000;filter:brightness(1.00)}10.000%{transform:rotateY(-36.00deg) translateZ(470px);opacity:0.728;filter:brightness(0.94)}17.200%{transform:rotateY(-36.00deg) translateZ(470px);opacity:0.728;filter:brightness(0.94)}20.000%{transform:rotateY(-72.00deg) translateZ(470px);opacity:0.172;filter:brightness(0.78)}27.200%{transform:rotateY(-72.00deg) translateZ(470px);opacity:0.172;filter:brightness(0.78)}30.000%{transform:rotateY(-108.00deg) translateZ(470px);opacity:0.000;filter:brightness(0.57)}37.200%{transform:rotateY(-108.00deg) translateZ(470px);opacity:0.000;filter:brightness(0.57)}40.000%{transform:rotateY(-144.00deg) translateZ(470px);opacity:0.000;filter:brightness(0.41)}47.200%{transform:rotateY(-144.00deg) translateZ(470px);opacity:0.000;filter:brightness(0.41)}50.000%{transform:rotateY(-180.00deg) translateZ(470px);opacity:0.000;filter:brightness(0.35)}57.200%{transform:rotateY(-180.00deg) translateZ(470px);opacity:0.000;filter:brightness(0.35)}60.000%{transform:rotateY(-216.00deg) translateZ(470px);opacity:0.000;filter:brightness(0.41)}67.200%{transform:rotateY(-216.00deg) translateZ(470px);opacity:0.000;filter:brightness(0.41)}70.000%{transform:rotateY(-252.00deg) translateZ(470px);opacity:0.000;filter:brightness(0.57)}77.200%{transform:rotateY(-252.00deg) translateZ(470px);opacity:0.000;filter:brightness(0.57)}80.000%{transform:rotateY(-288.00deg) translateZ(470px);opacity:0.172;filter:brightness(0.78)}87.200%{transform:rotateY(-288.00deg) translateZ(470px);opacity:0.172;filter:brightness(0.78)}90.000%{transform:rotateY(-324.00deg) translateZ(470px);opacity:0.728;filter:brightness(0.94)}97.200%{transform:rotateY(-324.00deg) translateZ(470px);opacity:0.728;filter:brightness(0.94)}100.000%{transform:rotateY(-360.00deg) translateZ(470px);opacity:1.000;filter:brightness(1.00)}}
 @media (prefers-reduced-motion:reduce){.card{animation-play-state:paused}}
 </style>
 <div class="world"><div class="ring">
 <div class="card" style="--c:#fb923c;--t:#fb923c1c;animation-delay:0.00s">
-<div class="dom"><span></span>Health</div><div class="res">3rd of 850+ teams</div><div class="proj">FieldScreen AI</div><div class="comp">Google MedGemma Impact Challenge</div></div>
+<div class="dom"><span></span>Health</div><div class="res">3rd place</div><div class="crowd">850+ teams</div><div class="proj">FieldScreen AI</div><div class="comp">Google MedGemma Impact Challenge</div></div>
 <div class="card" style="--c:#fb923c;--t:#fb923c1c;animation-delay:-28.80s">
-<div class="dom"><span></span>Health</div><div class="res">Winner, EdgeAgent track</div><div class="proj">LUMEN</div><div class="comp">Global AI Hackathon with Qwen Cloud</div></div>
+<div class="dom"><span></span>Health</div><div class="res">Winner, EdgeAgent track</div><div class="crowd">8k participants</div><div class="proj">LUMEN</div><div class="comp">Global AI Hackathon with Qwen Cloud</div></div>
 <div class="card" style="--c:#f472b6;--t:#f472b61c;animation-delay:-25.60s">
 <div class="dom"><span></span>Science</div><div class="res">3rd place</div><div class="proj">Hodgkin&#x27;s Razor</div><div class="comp">AI4S Open Innovation · Pazhou Algorithm Competition</div></div>
 <div class="card" style="--c:#a78bfa;--t:#a78bfa1c;animation-delay:-22.40s">
-<div class="dom"><span></span>AI agents</div><div class="res">2nd place</div><div class="proj">On the Line</div><div class="comp">AWS Agents for Humans · Good Neighbor Agents</div></div>
+<div class="dom"><span></span>AI agents</div><div class="res">2nd place</div><div class="crowd">9k participants</div><div class="proj">On the Line</div><div class="comp">AWS Agents for Humans · Good Neighbor Agents</div></div>
 <div class="card" style="--c:#a78bfa;--t:#a78bfa1c;animation-delay:-19.20s">
-<div class="dom"><span></span>AI agents</div><div class="res">2nd place</div><div class="proj">Raccord</div><div class="comp">Agentic Cinema · Grafana track</div></div>
+<div class="dom"><span></span>AI agents</div><div class="res">2nd place</div><div class="crowd">10k participants</div><div class="proj">Raccord</div><div class="comp">Agentic Cinema · Grafana track</div></div>
 <div class="card" style="--c:#22d3ee;--t:#22d3ee1c;animation-delay:-16.00s">
-<div class="dom"><span></span>Machine learning</div><div class="res">4th of 368</div><div class="proj">Poker coordination detector</div><div class="comp">Detect Suspicious Value Transfers in Poker</div></div>
+<div class="dom"><span></span>Machine learning</div><div class="res">4th place</div><div class="crowd">368 competitors</div><div class="proj">Poker coordination detector</div><div class="comp">Detect Suspicious Value Transfers in Poker</div></div>
 <div class="card" style="--c:#22d3ee;--t:#22d3ee1c;animation-delay:-12.80s">
 <div class="dom"><span></span>Machine learning</div><div class="res">Finalist, 1 of 5</div><div class="proj">OrbitE</div><div class="comp">TII OrbitSight Challenge</div></div>
 <div class="card" style="--c:#60a5fa;--t:#60a5fa1c;animation-delay:-9.60s">
