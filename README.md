@@ -1,32 +1,42 @@
+<div align="center">
+
 # Marc Donovici
 
-**Offline, multimodal and agentic AI for health, controls and other high-stakes work.**
+**AI researcher and prototype builder · Hackathon winner · Google, AWS, Alibaba Cloud**
 
 [LinkedIn](https://linkedin.com/in/marc-donovici) · [Kaggle](https://www.kaggle.com/marcdonovici) · [Devpost](https://devpost.com/Marc-Dvci)
 
-AI implementation lead for Group Internal Audit at Crédit Mutuel Alliance Fédérale in Strasbourg.
-I take generative AI from a business problem to production: six solutions shipped to a
-500-person function, with 80%+ regular usage. Outside work I build offline, multimodal and
-agentic systems in AI competitions.
+</div>
 
-<a href="#results"><img src="assets/results.svg" width="100%" alt="Competition results, one card at a time"></a>
+Former AI lead for the Inspection Générale of Crédit Mutuel Alliance Fédérale in Strasbourg, where I
+took generative AI from a business problem to production: six solutions shipped to a 500-person
+function, with 80%+ regular usage. I build offline, multimodal and agentic AI systems and test them
+in AI competitions.
 
-## Results
+## Competition results
+
+<a href="#competition-results"><img src="assets/results.svg" width="100%" alt="Competition results, one card at a time"></a>
+
+<details>
+<summary><b>All results, with links</b></summary>
+<br>
 
 | Result | Competition | Project |
 |---|---|---|
 | **3rd of 850+ teams** | Google MedGemma Impact Challenge 2026 | [FieldScreen AI](https://github.com/Marc-Dvci/FieldScreen_AI) · [writeup](https://www.kaggle.com/competitions/med-gemma-impact-challenge/writeups/fieldscreen-ai) · [Google blog](https://blog.google/innovation-and-ai/technology/health/med-gemma-impact-challenge/) |
-| **Winner, EdgeAgent track** | Global AI Hackathon with Qwen Cloud (Alibaba Cloud) | [LUMEN](https://github.com/Marc-Dvci/LUMEN) · [demo](https://youtu.be/h8hPsUjZMuU) |
-| **3rd place** | AI4S Open Innovation: AI for Life Science, 5th Pazhou Algorithm Competition | [Hodgkin's Razor](https://github.com/Marc-Dvci/Hodgkin-s-Razor) · [demo](https://marc-dvci.github.io/Hodgkin-s-Razor/) |
-| **Finalist, 1 of 6** | European Patent Office CodeFest 2026 | IP Value Framework |
-| **2nd place, Pro category** | Euro-Information Concours de Code 2025 | Python and C++ |
-| **2nd place, Good Neighbor Agents track** | AWS Agents for Humans Hackathon 2026 | [On the Line](https://github.com/Marc-Dvci/On-the-Line) |
-| **2nd place, Grafana track** | Agentic Cinema: The Blockbuster Hackathon | [Raccord](https://github.com/Marc-Dvci/Raccord) |
-| **4th of 368** | Detect Suspicious Value Transfers in Poker (SLASH) | Coordination detector for player pairs |
-| **Finalist, 1 of 5** | TII OrbitSight Challenge | [OrbitE](https://github.com/Marc-Dvci/orbite-orbitsight) |
-| **Honorable mention** | Tesseract 2026 Hackathon | [Vitrify](https://github.com/Marc-Dvci/Vitrify) |
+| **Winner**, EdgeAgent track | Global AI Hackathon with Qwen Cloud (Alibaba) | [LUMEN](https://github.com/Marc-Dvci/LUMEN) · [demo](https://youtu.be/h8hPsUjZMuU) |
+| **3rd place** | AI4S Open Innovation, Pazhou Algorithm Competition | [Hodgkin's Razor](https://github.com/Marc-Dvci/Hodgkin-s-Razor) · [demo](https://marc-dvci.github.io/Hodgkin-s-Razor/) |
+| **Finalist**, 1 of 6 | European Patent Office CodeFest 2026 | IP Value Framework |
+| **2nd place**, Pro category | Euro-Information Concours de Code 2025 | Python and C++ |
+| **2nd place**, Good Neighbor Agents track | AWS Agents for Humans Hackathon 2026 | [On the Line](https://github.com/Marc-Dvci/On-the-Line) |
+| **2nd place**, Grafana track | Agentic Cinema Hackathon | [Raccord](https://github.com/Marc-Dvci/Raccord) |
+| **4th of 368** | SLASH: Suspicious Value Transfers in Poker | Coordination detector |
+| **Finalist**, 1 of 5 | TII OrbitSight Challenge | [OrbitE](https://github.com/Marc-Dvci/orbite-orbitsight) |
+| **Honorable mention** | Tesseract Hackathon 2026 | [Vitrify](https://github.com/Marc-Dvci/Vitrify) |
 
-## Projects
+</details>
+
+## Projects by domain
 
 Hover a domain to see its projects, hover a project to read what it does, click a project to open it. Dashed lines join a project to its other domains.
 
