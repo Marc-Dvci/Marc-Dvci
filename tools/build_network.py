@@ -51,9 +51,12 @@ def label_w(name, win):
     return len(name) * FONT * (0.57 if win else 0.53) + 30
 
 
+HUB_LIFT = 44                     # the domain name sits this far above its glowing core
+
+
 def hub_box(k):
     label = CLUSTERS[k][0]
-    return len(label) * 19 + 70, 64
+    return len(label) * 23 + 60, 70
 
 
 def layout(seed=11):
@@ -107,10 +110,10 @@ def layout(seed=11):
                 hx, hy = HUBS[k]
                 hw, hh = hub_box(k)
                 ox = min(a1, hx + hw / 2) - max(a0, hx - hw / 2) + 10
-                oy = (hh / 2 + FONT) - abs(ay - hy * COS)
+                oy = (hh / 2 + FONT) - abs(ay - (hy - HUB_LIFT) * COS)
                 if ox > 0 and oy > 0:
                     moved = True
-                    pos[a][1] += (1 if pos[a][1] >= hy else -1) * (oy / COS + 1)
+                    pos[a][1] += (1 if pos[a][1] >= hy - HUB_LIFT else -1) * (oy / COS + 1)
         # stay near the anchor (between its domains, or on its domain's ring)
         for a in keys:
             dx, dy = pos[a][0] - anchor[a][0], pos[a][1] - anchor[a][1]
@@ -123,13 +126,11 @@ def layout(seed=11):
     return pos, meta
 
 
-def elbow(x, y, tx, ty):
-    """Connector from a project at (x, y) to a hub at (tx, ty): vertical first, then horizontal."""
-    dx, dy = tx - x, ty - y
-    bw = "2px"
-    widths = [bw if dy < 0 else "0", bw if dx < 0 else "0", bw if dy > 0 else "0", bw if dx > 0 else "0"]
-    return (f"margin:{min(0, dy):.0f}px 0 0 {min(0, dx):.0f}px;width:{abs(dx):.0f}px;height:{abs(dy):.0f}px;"
-            f"border-width:{' '.join(widths)}")
+def arc(x, y, tx, ty, flip=False):
+    """Connector from a project at (x, y) to a hub at (tx, ty): a tapered arc (rounded top border), rotated into place."""
+    L = math.hypot(tx - x, ty - y)
+    ang = math.degrees(math.atan2(ty - y, tx - x))
+    return f"width:{L:.0f}px;transform:rotate({ang:.0f}deg){' scaleY(-1)' if flip else ''}"
 
 
 def mermaid():
@@ -193,12 +194,12 @@ def mermaid():
         x, y = pos[r]
         hx, hy = HUBS[meta[r]["k"]]
         css.append(f"[id*=t-p{n}-]{{transform:translate({x:.0f}px,{y:.0f}px);--c:{CLUSTERS[meta[r]['k']][1]}}}")
-        css.append(f"[id*=t-p{n}-] div::after{{{elbow(x, y, hx, hy)}}}")
+        css.append(f"[id*=t-p{n}-] div::after{{{arc(x, y, hx, hy, n % 2 == 1)}}}")
     for j, (r, k2) in enumerate(extra):
         x, y = pos[r]
         hx, hy = HUBS[k2]
         css.append(f"[id*=t-s{j}-]{{transform:translate({x:.0f}px,{y:.0f}px);--c:{CLUSTERS[k2][1]}}}")
-        css.append(f"[id*=t-s{j}-] div::after{{{elbow(x, y, hx, hy).replace('2px', '1.5px')}}}")
+        css.append(f"[id*=t-s{j}-] div::after{{{arc(x, y, hx, hy, j % 2 == 0)}}}")
 
     # captions open toward the inside of the board near its edges
     flips = {"cr": [], "cl": [], "cu": []}
@@ -228,13 +229,11 @@ def mermaid():
 .node div::before,.node div::after{{content:counter(x);color:transparent;font-size:0;position:absolute;left:50%;top:50%;pointer-events:none}}
 .sky,.corner,.conn{{pointer-events:none}}
 .corner div::before,.corner div::after,.sky div::after,.conn div::before,.hub div::after{{display:none}}
-.sky div::before{{width:6000px;height:5200px;margin:-2600px -3000px;background-color:{BG};
-background-image:linear-gradient(#ffffff0e 2px,transparent 2px),linear-gradient(90deg,#ffffff0e 2px,transparent 2px),linear-gradient(#ffffff06 1px,transparent 1px),linear-gradient(90deg,#ffffff06 1px,transparent 1px);
-background-size:240px 240px,240px 240px,48px 48px,48px 48px}}
-.node div::after{{border-style:solid;border-color:var(--c);border-radius:6px;opacity:.42;z-index:-1;transition:opacity .35s {EASE}}}
-.conn div::after{{opacity:.45;border-style:dashed}}
-{P.replace(',', ' div::before,')} div::before{{width:12px;height:12px;margin:-6px;background-color:var(--c);border-radius:2px;box-shadow:0 0 0 3px {BG}}}
-.wl div::before,.wr div::before{{width:14px;height:14px;margin:-7px;background-color:{GOLD};box-shadow:0 0 0 3px {BG},0 0 0 5px {GOLD}}}
+.sky div::before{{width:6000px;height:5200px;margin:-2600px -3000px;background-color:{BG};background-image:radial-gradient(ellipse 40% 40% at 50% 50%,#151c2b,transparent)}}
+.node div::after{{left:50%;top:auto;bottom:50%;height:auto;aspect-ratio:6/1;transform-origin:0 100%;border-top:2.5px solid var(--c);border-radius:50%/100% 100% 0 0;opacity:.62;z-index:-1;transition:opacity .35s {EASE}}}
+.conn div::after{{aspect-ratio:8/1;border-top:2px dashed var(--c);opacity:.5}}
+{P.replace(',', ' div::before,')} div::before{{width:13px;height:13px;margin:-6.5px;background-color:var(--c);border-radius:50%;box-shadow:0 0 0 3px {BG},0 0 12px var(--c)}}
+.wl div::before,.wr div::before{{width:16px;height:16px;margin:-8px;background-color:{GOLD};border-radius:50%;box-shadow:0 0 0 3px {BG},0 0 0 5px {GOLD},0 0 16px {GOLD}}}
 .node .nodeLabel{{position:absolute;left:50%;top:50%;display:block;font:500 {FONT}px/1.25 {FONTS};white-space:nowrap;color:{INK}!important;text-shadow:0 0 6px {BG},0 0 2px {BG};transition:color .25s}}
 .node .nodeLabel p{{margin:0;color:inherit!important}}
 .pr .nodeLabel,.wr .nodeLabel{{transform:translate(18px,-50%) scaleY({SQUASH:.3f})}}
@@ -247,18 +246,15 @@ background-size:240px 240px,240px 240px,48px 48px,48px 48px}}
 .nodes:has({P.replace(',', ':hover,')}:hover) .node:not(:hover,.sky,.corner,.hub){{opacity:.28}}
 .nodes:has({P.replace(',', ':hover,')}:hover) .hub{{opacity:.35}}
 .nodeLabel i{{display:block;position:absolute;top:100%;left:0;margin-top:8px;width:max-content;max-width:640px;white-space:normal;text-align:left;font:400 26px/1.45 {FONTS};font-style:normal;color:#c9d1d9;
-background-color:#0d1117f2;padding:12px 16px;border:1px solid #30363d;border-left:4px solid var(--c);text-shadow:none;opacity:0;transform:translateY(-4px);transition:opacity .2s,transform .2s {EASE};pointer-events:none}}
+background-color:#0d1117f2;padding:12px 16px;border:1px solid #30363d;border-left:4px solid var(--c);border-radius:6px;text-shadow:none;opacity:0;transform:translateY(-4px);transition:opacity .2s,transform .2s {EASE};pointer-events:none}}
 .nodeLabel i b{{display:block;margin-bottom:6px;font-weight:650;color:{GOLD}}}
 .pl .nodeLabel i,.wl .nodeLabel i{{left:auto;right:0}}
 .cr .nodeLabel i{{left:auto!important;right:0}}
 .cl .nodeLabel i{{right:auto!important;left:0}}
 .cu .nodeLabel i{{top:auto;bottom:100%;margin:0 0 8px}}
 {P.replace(',', ':hover .nodeLabel i,')}:hover .nodeLabel i{{opacity:1;transform:none}}
-.hub .nodeLabel{{transform:translate(-50%,-50%) scaleY({SQUASH:.3f});padding:12px 22px;font:650 25px/1 {FONTS};letter-spacing:.12em;text-transform:uppercase;color:#fff!important;
-background-color:#0d1117;border:2px solid var(--c);border-radius:4px;text-shadow:none}}
-.hub div::before{{display:none}}
-.hub .nodeLabel p{{display:inline}}
-.hub .nodeLabel::before{{content:counter(x);font-size:0;display:inline-block;width:13px;height:13px;margin:0 14px 3px 0;vertical-align:middle;background-color:var(--c);border-radius:2px}}
+.hub div::before{{display:block;width:30px;height:30px;margin:-15px;border-radius:50%;background-image:radial-gradient(circle,#fff 0,var(--c) 42%,transparent 72%);box-shadow:0 0 40px 12px var(--c)}}
+.hub .nodeLabel{{transform:translate(-50%,calc(-50% - {HUB_LIFT}px)) scaleY({SQUASH:.3f});font:700 30px/1 {FONTS};letter-spacing:.1em;text-transform:uppercase;color:#fff!important;text-shadow:0 0 14px var(--c),0 0 3px {BG},0 0 8px {BG}}}
 .hub{{transition:opacity .35s {EASE}}}
 a,a:hover,a *,a:hover *{{text-decoration:none!important}}
 """
