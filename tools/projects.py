@@ -100,3 +100,22 @@ PROJECTS = [
     ("Footlight", "Footlight", "consumer", ["health"], None),
     ("Recall-Me-Maybe", "Recall Me Maybe", "consumer", ["controls"], None),
 ]
+
+# Profile captions that replace a repo's GitHub description in the network (the repos stay untouched).
+CAPTIONS = {
+    "Gitlab-2026-project": "Erases one customer's data across records, invoices, files and logs, one approved store at a time.",
+    "LUMEN-Mobile": "LUMEN on Android: neonatal danger-sign screening on a health worker's phone, on Qwen Cloud when online and an on-device model when not.",
+    "FREUID": "Fraud detection on identity-document images for the FREUID Challenge 2026 (IJCAI-ECAI, Microblink Fraud Lab).",
+    "Reality-Diff": "Reconstructs the rooms, objects and vehicles recurring across a photo library as state over time, and answers what changed with the source photos attached.",
+    "Lore": "A permission and lineage control plane for documentary and archival media: every derivative clip maps back to its source and its live consent, on ClickHouse.",
+    "ChalkTrace": "A course studio that turns imported course material into adaptive lessons, each one traceable to the source it came from.",
+    "Raccord": "An accessibility reliability agent for live media: it investigates through Grafana and closes each incident with a re-measurement.",
+    "Countersign": "A second line of defence that runs itself: deterministic tests over full populations on a schedule, and every finding needs a human signature.",
+    "lockstep": "Community DAOs pledge to a shared plan, and money moves only when the whole plan is funded.",
+    "KEEL": "Programmable risk mandates for tokenized-stock portfolios on Solana.",
+    "Legwork": "Paid, verified real-world missions on Solana Mobile.",
+    "SASH": "A ventilation adviser built on Ring devices that never looks at an image: it says which window to open, and when.",
+    "Understudy": "Mixed-reality mirror therapy on your own table: the strong hand drives a mirrored hand, and assistance changes finger by finger as movement recovers.",
+    "Titra": "Open oxygen control for preterm babies on low-cost CPAP, built on QNX 8.0: each cot goes to a defined safe state when a sensor, a cable or its own software fails.",
+    "proof-of-loss": "Turns the photos, receipts and camera events on a UGREEN AI NAS into an insurer-ready claim file after a burglary, flood or fire, with a SHA-256 hash for every exhibit.",
+}

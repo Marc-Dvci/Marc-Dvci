@@ -1,11 +1,13 @@
 # Marc Donovici
 
+**Offline, multimodal and agentic AI for health, controls and other high-stakes work.**
+
+[LinkedIn](https://linkedin.com/in/marc-donovici) · [Kaggle](https://www.kaggle.com/marcdonovici) · [Devpost](https://devpost.com/Marc-Dvci)
+
 AI implementation lead for Group Internal Audit at Crédit Mutuel Alliance Fédérale in Strasbourg.
 I take generative AI from a business problem to production: six solutions shipped to a
 500-person function, with 80%+ regular usage. Outside work I build offline, multimodal and
 agentic systems in AI competitions.
-
-[LinkedIn](https://linkedin.com/in/marc-donovici)
 
 <a href="#results"><img src="assets/results.svg" width="100%" alt="Competition results, one card at a time"></a>
 
@@ -17,7 +19,7 @@ agentic systems in AI competitions.
 | **Winner, EdgeAgent track** | Global AI Hackathon with Qwen Cloud (Alibaba Cloud) | [LUMEN](https://github.com/Marc-Dvci/LUMEN) · [demo](https://youtu.be/h8hPsUjZMuU) |
 | **3rd place** | AI4S Open Innovation: AI for Life Science, 5th Pazhou Algorithm Competition | [Hodgkin's Razor](https://github.com/Marc-Dvci/Hodgkin-s-Razor) · [demo](https://marc-dvci.github.io/Hodgkin-s-Razor/) |
 | **Finalist, 1 of 6** | European Patent Office CodeFest 2026 | IP Value Framework |
-| **2nd place, Pro category** | Euro-Information Concours de Code 2025 (Python, C++) | |
+| **2nd place, Pro category** | Euro-Information Concours de Code 2025 | Python and C++ |
 | **2nd place, Good Neighbor Agents track** | AWS Agents for Humans Hackathon 2026 | [On the Line](https://github.com/Marc-Dvci/On-the-Line) |
 | **2nd place, Grafana track** | Agentic Cinema: The Blockbuster Hackathon | [Raccord](https://github.com/Marc-Dvci/Raccord) |
 | **4th of 368** | Detect Suspicious Value Transfers in Poker (SLASH) | Coordination detector for player pairs |
@@ -96,11 +98,11 @@ flowchart LR
   p3["Kept<i>Customer promises connected to Jira delivery work.</i>"]:::pr
   p4["Slowest Link<i>Finds the recovery promises a system can't keep: each promise in a continuity plan, checked in Cypher on Relate against everything the function depends on.</i>"]:::pr
   p5["Attestable<i>Prove how your AI media was made: and make the proof impossible to quietly rewrite.</i>"]:::pr
-  p6["Lore<i>Consent that lives as long as the story does.</i>"]:::pl
+  p6["Lore<i>A permission and lineage control plane for documentary and archival media: every derivative clip maps back to its source and its live consent, on ClickHouse.</i>"]:::pl
   p7["Right-Hand Rule<i>A free-standing Unitree G1 navigates by touch using joint state and IMU only.</i>"]:::pr
   p8["Guardian 172<i>Offline flight-safety monitor for the Cessna 172S</i>"]:::pl
   p9["decimal-rs<i>A Rust port of decimal.js: Port Mortem 2026, Track F (JavaScript to Rust).</i>"]:::pr
-  p10["LUMEN Mobile<i>AI neonatal specialist</i>"]:::pl
+  p10["LUMEN Mobile<i>LUMEN on Android: neonatal danger-sign screening on a health worker's phone, on Qwen Cloud when online and an on-device model when not.</i>"]:::pl
   p11["Silah<i>A private companion for inherited disease risk in Abu Dhabi, from the couple check to counselling, birth and family.</i>"]:::pr
   p12["On the Line<i><b>2nd place · AWS Agents for Humans</b>A community resource directory that phones the food banks and clinics it lists, confirms what is still true, and asks a person only when the answer needs judgment.</i>"]:::wl
   p13["Phone-call agents<i>Portable phone-call Agent Skills, apps, examples, adapters, and scheduler recipes for AI agents.</i>"]:::pl
@@ -109,56 +111,56 @@ flowchart LR
   p16["Are You Normal?<i>A daily Reddit game that puts you, your subreddit and a real published survey on the same chart.</i>"]:::pr
   p17["Coffer<i>Coffer is a Nimiq Pay Mini App that turns the USDT in the wallet into gold, euros or bitcoin held at the user's own address, with two signatures and no POL.</i>"]:::pl
   p18["LIFO<i>A memecoin on NEAR whose reserve pays the newest buyers first in a crash, so the earliest holders, not the latest, wait at the back of the line.</i>"]:::pl
-  p19["Lockstep<i>Community DAOs pledge to a shared plan.</i>"]:::pr
-  p20["Legwork<i>Get paid for the legwork.</i>"]:::pr
+  p19["Lockstep<i>Community DAOs pledge to a shared plan, and money moves only when the whole plan is funded.</i>"]:::pr
+  p20["Legwork<i>Paid, verified real-world missions on Solana Mobile.</i>"]:::pr
   p21["FieldScreen AI<i><b>3rd of 850+ teams · Google MedGemma Impact Challenge</b>Offline TB screening for community health workers: MedGemma chest X-ray, cough audio, voice intake, 15 languages.</i>"]:::wr
   p22["LUMEN<i><b>Winner, EdgeAgent track · Global AI Hackathon with Qwen Cloud</b>Neonatal danger-sign screening for community health workers.</i>"]:::wl
   p23["Kangaroo<i>Offline newborn-watch platform for parents and community health workers, built entirely in Java 26.</i>"]:::pl
   p24["Provider Directory<i>Keeps a US provider directory accurate against NPPES and CMS data.</i>"]:::pr
   p25["RxLint<i>Verifiable pediatric medication checks with NVIDIA Nemotron on Nebius Token Factory, a deterministic WHO/FDA rule kernel, FHIR import and live regulator intelligence.</i>"]:::pr
-  p26["Titra<i>Open oxygen control for preterm babies on low-cost CPAP, built on QNX 8.0: one board holds several babies in the safe oxygen range, puts each cot in a defined safe state when a sensor, a cable or its own software fails, and runs a local language model beside them that the kernel keeps away from every valve.</i>"]:::pl
+  p26["Titra<i>Open oxygen control for preterm babies on low-cost CPAP, built on QNX 8.0: each cot goes to a defined safe state when a sensor, a cable or its own software fails.</i>"]:::pl
   p27["Threshold<i>One web page where several independent care organisations answer a person's agent at the same time, and compose one plan between them.</i>"]:::pr
   p28["Tail Risk<i>Commercial-air viability for time-critical organ transport.</i>"]:::pr
   p29["Mantel<i>Fire TV app that turns the living-room TV into a patient memory for a person living with dementia.</i>"]:::pl
   p30["Encore<i>A taste agent for care-home activity coordinators, built on Qloo: the culture of each resident's youth, one-to-one sessions and a lounge film that leaves nobody out.</i>"]:::pr
   p31["SafeTriageNet<i>Safety-aware emergency triage with asymmetric clinical cost (Kaggle Triagegeist)</i>"]:::pl
   p32["SPECTRA<i>Synthetic Patient Engine for Cohort Transport, Reconstruction and Audit</i>"]:::pr
-  p33["FREUID<i>Code for the 2026 FREUID Challenge</i>"]:::pr
+  p33["FREUID<i>Fraud detection on identity-document images for the FREUID Challenge 2026 (IJCAI-ECAI, Microblink Fraud Lab).</i>"]:::pr
   p34["Breathing Room<i>Crowd pushing and minutes to danger from ordinary CCTV, with OpenCV 5 on AWS Graviton and a steward in charge</i>"]:::pl
   p35["OrbitE<i><b>Finalist, 1 of 5 · TII OrbitSight Challenge</b>OrbitE - event-native CPU-only RSO detection and tracking for the TII OrbitSight Challenge.</i>"]:::wl
-  p36["Reality Diff<i>Semantic memory for the physical world.</i>"]:::pr
+  p36["Reality Diff<i>Reconstructs the rooms, objects and vehicles recurring across a photo library as state over time, and answers what changed with the source photos attached.</i>"]:::pr
   p37["Arm's Length<i>Independent approval for agent-written code: a Forge app for Jira, Bitbucket, Confluence and Rovo</i>"]:::pl
   p38["Pedigree<i>Which licence terms an open model inherits, from which ancestor, under which clause: 213,928 Hugging Face models in one Relate file, checked before an agent downloads.</i>"]:::pl
   p39["Undeclared<i>Find the native libraries a Python wheel ships but does not declare in its SBOM.</i>"]:::pl
-  p40["Countersign<i>Countersign is a second line of defence that runs itself.</i>"]:::pr
+  p40["Countersign<i>A second line of defence that runs itself: deterministic tests over full populations on a schedule, and every finding needs a human signature.</i>"]:::pr
   p41["Praxis<i>Evidence-bound remediation agent for DataHub-governed data products.</i>"]:::pr
   p42["Erasure Desk<i>Erases one customer's data across records, invoices, files and logs, one approved store at a time.</i>"]:::pl
   p43["Mental Model Drift<i>Detects when what an engineer believes about a system no longer matches what the system is.</i>"]:::pr
-  p44["Raccord<i><b>2nd place · Agentic Cinema</b>Accessible Experience Reliability for live media.</i>"]:::wr
+  p44["Raccord<i><b>2nd place · Agentic Cinema</b>An accessibility reliability agent for live media: it investigates through Grafana and closes each incident with a re-measurement.</i>"]:::wr
   p45["Callibrate<i>Callibrate calls the authoritative source with CALL-E and reconciles a record against what it hears.</i>"]:::pl
   p46["CIRCA<i>CIRCA is an Alexa+ transaction guardian for home repairs.</i>"]:::pl
   p47["Second Key<i>A two-person check a family runs before an elderly relative sends money to someone new.</i>"]:::pl
   p48["Still True<i>The last look before every scheduled Buffer post goes out: re-checks the queue against the calendar, the linked page, the weather, remembrance days and disaster alerts, and holds what the world has made wrong.</i>"]:::pl
   p49["Chat Is This Real<i>Sourced fact checks and VOD clips for Twitch chat</i>"]:::pl
-  p50["ChalkTrace<i>Adaptive learning that earns the right to teach.</i>"]:::pl
+  p50["ChalkTrace<i>A course studio that turns imported course material into adaptive lessons, each one traceable to the source it came from.</i>"]:::pl
   p51["All-Access<i>Recover a disrupted film shoot without ever dropping an approved access arrangement: and prove the plan reached everyone.</i>"]:::pr
   p52["Keystone<i>All-or-nothing agent purchases on Visa.</i>"]:::pr
-  p53["KEEL<i>Keep Every Exposure within Limits.</i>"]:::pl
+  p53["KEEL<i>Programmable risk mandates for tokenized-stock portfolios on Solana.</i>"]:::pl
   p54["BridgeSafe<i>A Flare-controlled XRPL treasury: confidential payment instructions, spending policy enforced inside a TEE, settlement proved by the Flare Data Connector.</i>"]:::pl
   p55["Covered<i>Covered runs a house-cleaning cooperative's week on one board: each household's PayPal holds the visit's pay 24 hours ahead, and whoever does the visit is paid through PayPal Payouts when they check out.</i>"]:::pl
   p56["Criée<i>A clearing house for what small food sellers have left at closing: standing wishes, a deterministic market, PayPal settlement.</i>"]:::pl
   p57["BACKSTOP<i>Capital-backed verification for hosted AI inference.</i>"]:::pl
   p58["RallyForge<i>RallyForge v3: reproducible G1 table-tennis research, measured-state perception, continuous rallies, and a scoped ARM64 standby runner.</i>"]:::pr
   p59["fastpath64<i>2.12x faster IQ4_XS prefill on Arm Neoverse: the missing smmla repack kernel for llama.cpp.</i>"]:::pr
-  p60["SASH<i>SASH - Street Air, Sensed at Home.</i>"]:::pr
+  p60["SASH<i>A ventilation adviser built on Ring devices that never looks at an image: it says which window to open, and when.</i>"]:::pr
   p61["Hodgkin's Razor<i><b>3rd place · AI4S Open Innovation</b>A mechanistic digital twin for neural organ-on-chip recordings: from two recordings of one well, the molecular mechanism a compound moved, or a refusal.</i>"]:::wr
   p62["Vitrify<i><b>Honorable mention · Tesseract Hackathon</b>End-to-end inverse design of organ nanowarming across JAX and FEniCSx.</i>"]:::wr
   p63["Mizan<i>Satellite-constrained abstraction accounting and risk-bounded allocation for unmetered aquifers.</i>"]:::pr
   p64["Good Bias<i>Good Bias: a gown that fits many body sizes through the geometry of its own cloth</i>"]:::pr
   p65["RUNSAFE<i>RUNSAFE: a proved damage rating for knitwear</i>"]:::pr
-  p66["Proof of Loss<i>Proof of Loss is an Uliya Skill for a household on the evening of a burglary, flood or fire: it turns the photos, receipts and camera events already on a UGREEN AI NAS into an insurer-ready claim file, with a SHA-256 hash for every exhibit.</i>"]:::pr
+  p66["Proof of Loss<i>Turns the photos, receipts and camera events on a UGREEN AI NAS into an insurer-ready claim file after a burglary, flood or fire, with a SHA-256 hash for every exhibit.</i>"]:::pr
   p67["Handpicked<i>See the diamonds you are comparing on your own hand at their listed size, with the price of every face-up square millimetre.</i>"]:::pl
-  p68["Understudy<i>A daily mirror exercise at your own table.</i>"]:::pr
+  p68["Understudy<i>Mixed-reality mirror therapy on your own table: the strong hand drives a mirrored hand, and assistance changes finger by finger as movement recovers.</i>"]:::pr
   p69["Footlight<i>A SPECS Lens for people with Parkinson's who freeze mid-step: lines on the real floor at their step length, and a beat at their walking pace.</i>"]:::pl
   p70["Recall Me Maybe<i>You shouldn't need to know what it's called to know it was recalled.</i>"]:::pr
   h0["Science"]:::hub
@@ -327,31 +329,8 @@ flowchart LR
 ```
 <!-- network:end -->
 
-## Selected projects
-
-**Offline healthcare AI**
-- [FieldScreen AI](https://github.com/Marc-Dvci/FieldScreen_AI): tuberculosis screening for community
-  health workers with no network. Fine-tuned MedGemma on chest X-rays, cough audio classification,
-  voice intake and output in 15 languages, on one laptop.
-- [LUMEN](https://github.com/Marc-Dvci/LUMEN): neonatal danger-sign screening on the WHO IMNCI protocol.
-  Runs on Qwen Cloud and falls back to a fine-tuned on-device model when the connection drops.
-  [Android app](https://github.com/Marc-Dvci/LUMEN-Mobile).
-
-**Governed agents for regulated work**
-- [Lore](https://github.com/Marc-Dvci/Lore): a permission and lineage control plane for archival media
-  on ClickHouse. Every query family answers in under 33 ms at p99 on 300M rows.
-- [Threshold](https://github.com/Marc-Dvci/Threshold): several care organisations answer one person's
-  AI assistant through WebMCP and compose a single plan.
- [Video](https://youtu.be/J_AyAdoT05I)
-
-**Performance and systems**
-- [fastpath64](https://github.com/Marc-Dvci/fastpath64): an Arm `smmla` kernel for IQ4_XS in llama.cpp.
-  Prefill goes from 0.58x to 1.24x of Q4_K on Neoverse N2.
-- [decimal-rs](https://github.com/Marc-Dvci/decimal-rs): decimal.js ported to Rust. The original test
-  suite runs unmodified against the Rust build.
-- [Vitrify](https://github.com/Marc-Dvci/Vitrify): inverse design of organ nanowarming as one
-  differentiable function across JAX and FEniCSx.
-
 ## Stack
-Python · TypeScript · Java · Rust · C · FastAPI · React · Google ADK · AWS Strands · MCP ·
-Vertex AI · Cloud Run · AWS CDK · Alibaba Function Compute · ClickHouse · Docker · pytest · Playwright
+
+- **Languages and frameworks:** Python · TypeScript · Java · Rust · C · FastAPI · React
+- **AI and agents:** Google ADK · AWS Strands · MCP · Vertex AI
+- **Cloud, data and testing:** Cloud Run · AWS CDK · Alibaba Function Compute · ClickHouse · Docker · pytest · Playwright

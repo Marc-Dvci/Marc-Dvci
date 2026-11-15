@@ -18,7 +18,7 @@ import math, sys, json, random
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
-from projects import CLUSTERS, HUBS, PROJECTS
+from projects import CLUSTERS, HUBS, PROJECTS, CAPTIONS
 
 GH = "https://github.com/Marc-Dvci/"
 TILT = 38
@@ -31,20 +31,19 @@ GOLD = "#fcd34d"
 EASE = "cubic-bezier(.16,1,.3,1)"
 FONTS = "Segoe UI Variable Text,Segoe UI,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif"
 DESC_FILE = Path(__file__).parent / "descriptions.json"
-DESC_EXTRA = {"Gitlab-2026-project": "Erases one customer's data across records, invoices, files and logs, one approved store at a time."}
 
 
 def descriptions():
-    """First sentence of each repo description (gh repo list --json name,description)."""
+    """Profile caption if set in projects.CAPTIONS, else the first sentence of the repo description."""
     raw = {r["name"]: (r["description"] or "") for r in json.loads(DESC_FILE.read_text(encoding="utf-8"))}
-    raw.update(DESC_EXTRA)
     out = {}
     for repo, text in raw.items():
         text = text.replace(" — ", ": ").strip()
         cut = text.find(". ")
         first = text[:cut + 1] if cut > 0 else text
-        out[repo] = first.replace('"', "").replace("#", "").replace(";", ",")
-    return out
+        out[repo] = first
+    out.update(CAPTIONS)
+    return {r: t.replace('"', "").replace("#", "").replace(";", ",") for r, t in out.items()}
 
 
 def label_w(name, win):
