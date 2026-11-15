@@ -8,16 +8,16 @@ from pathlib import Path
 
 # result, project, competition, domain colour
 RESULTS = [
-    ("3rd of 850+ teams", "FieldScreen AI", "Google MedGemma Impact Challenge", "#ff7a45"),
-    ("Winner, EdgeAgent track", "LUMEN", "Global AI Hackathon with Qwen Cloud", "#ff7a45"),
-    ("3rd place", "Hodgkin's Razor", "AI4S Open Innovation · Pazhou Algorithm Competition", "#ff5fa8"),
-    ("2nd place", "On the Line", "AWS Agents for Humans · Good Neighbor Agents", "#b07cff"),
-    ("2nd place", "Raccord", "Agentic Cinema · Grafana track", "#b07cff"),
-    ("4th of 368", "Poker coordination detector", "Detect Suspicious Value Transfers in Poker", "#25d0a6"),
-    ("Finalist, 1 of 5", "OrbitE", "TII OrbitSight Challenge", "#ffc23d"),
-    ("Finalist, 1 of 6", "IP Value Framework", "European Patent Office CodeFest", "#5b9dff"),
-    ("2nd place, Pro", "Python and C++", "Euro-Information Concours de Code", "#5b9dff"),
-    ("Honorable mention", "Vitrify", "Tesseract Hackathon", "#ff5fa8"),
+    ("3rd of 850+ teams", "FieldScreen AI", "Google MedGemma Impact Challenge", "#fb923c"),
+    ("Winner, EdgeAgent track", "LUMEN", "Global AI Hackathon with Qwen Cloud", "#fb923c"),
+    ("3rd place", "Hodgkin's Razor", "AI4S Open Innovation · Pazhou Algorithm Competition", "#f472b6"),
+    ("2nd place", "On the Line", "AWS Agents for Humans · Good Neighbor Agents", "#a78bfa"),
+    ("2nd place", "Raccord", "Agentic Cinema · Grafana track", "#a78bfa"),
+    ("4th of 368", "Poker coordination detector", "Detect Suspicious Value Transfers in Poker", "#22d3ee"),
+    ("Finalist, 1 of 5", "OrbitE", "TII OrbitSight Challenge", "#22d3ee"),
+    ("Finalist, 1 of 6", "IP Value Framework", "European Patent Office CodeFest", "#60a5fa"),
+    ("2nd place, Pro", "Python and C++", "Euro-Information Concours de Code", "#fbbf24"),
+    ("Honorable mention", "Vitrify", "Tesseract Hackathon", "#f472b6"),
 ]
 W, H = 880, 290
 CARD_W, CARD_H = 300, 188
@@ -59,25 +59,25 @@ def svg():
     cards = "\n".join(card(i, n, *r) for i, r in enumerate(RESULTS))
     css = f"""
 *{{box-sizing:border-box;margin:0;padding:0}}
-.stage{{width:{W}px;height:{H}px;overflow:hidden;position:relative;font-family:{FONT};
-background:radial-gradient(ellipse 70% 90% at 50% 45%,#17223f 0,#0a1020 55%,#05070d 100%);border-radius:14px}}
-.stars{{position:absolute;inset:0;background-image:radial-gradient(1.3px 1.3px at 37px 61px,#ffffff99 50%,transparent 51%),radial-gradient(1.2px 1.2px at 113px 19px,#cfe0ff77 50%,transparent 51%),radial-gradient(1.5px 1.5px at 171px 143px,#ffffff55 50%,transparent 51%);background-size:210px 170px,260px 230px,330px 290px}}
-.world{{position:absolute;left:50%;top:50%;perspective:1100px;perspective-origin:50% 35%}}
+.stage{{width:{W}px;height:{H}px;overflow:hidden;position:relative;font-family:{FONT};background-color:#0b0f17;
+background-image:linear-gradient(#ffffff0e 1px,transparent 1px),linear-gradient(90deg,#ffffff0e 1px,transparent 1px),linear-gradient(#ffffff06 1px,transparent 1px),linear-gradient(90deg,#ffffff06 1px,transparent 1px);
+background-size:120px 120px,120px 120px,24px 24px,24px 24px;background-position:-1px -1px}}
+.world{{position:absolute;left:50%;top:50%;perspective:1300px;perspective-origin:50% 40%}}
 .ring{{position:absolute;transform-style:preserve-3d;transform:translateZ(-{RADIUS}px)}}
-.card{{position:absolute;left:-{CARD_W // 2}px;top:-{CARD_H // 2}px;width:{CARD_W}px;height:{CARD_H}px;border-radius:18px;padding:22px 24px;
-background:linear-gradient(155deg,#1b2540,#0d1427 45%,#080c18);border:1px solid #ffffff22;box-shadow:0 18px 50px #000a,inset 0 1px 0 #ffffff26;
-overflow:hidden;animation:ring {total:.1f}s cubic-bezier(.65,0,.35,1) infinite;backface-visibility:hidden}}
-.glow{{position:absolute;inset:-40%;background:radial-gradient(circle at 20% 15%,var(--c),transparent 45%);opacity:.38}}
-.res{{position:relative;font-size:27px;font-weight:750;letter-spacing:-.01em;color:#fff;line-height:1.15;text-shadow:0 0 18px var(--c)}}
-.proj{{position:relative;margin-top:12px;font-size:19px;font-weight:650;color:var(--c)}}
-.comp{{position:relative;margin-top:8px;font-size:14px;line-height:1.35;color:#c4cde6}}
-.floor{{position:absolute;left:0;right:0;bottom:0;height:50px;background:linear-gradient(transparent,#05070dcc)}}
+.card{{position:absolute;left:-{CARD_W // 2}px;top:-{CARD_H // 2}px;width:{CARD_W}px;height:{CARD_H}px;border-radius:4px;padding:26px 24px 20px;
+background-color:#0d1117;border:1px solid #30363d;border-top:3px solid var(--c);box-shadow:0 16px 40px #000c;
+overflow:hidden;animation:ring {total:.1f}s cubic-bezier(.65,0,.35,1) infinite}}
+.glow{{display:none}}
+.res{{font-size:27px;font-weight:700;letter-spacing:-.01em;color:#f0f6fc;line-height:1.15}}
+.proj{{margin-top:12px;font-size:18px;font-weight:600;color:var(--c)}}
+.comp{{margin-top:8px;font-size:14px;line-height:1.4;color:#8b949e}}
+.floor{{display:none}}
 {keyframes(n)}
 @media (prefers-reduced-motion:reduce){{.card{{animation-play-state:paused}}}}
 """
     return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-label="Competition results: {'; '.join(r[0] + ', ' + r[1] for r in RESULTS)}">
 <foreignObject width="{W}" height="{H}"><div xmlns="http://www.w3.org/1999/xhtml" class="stage"><style>{css}</style>
-<div class="stars"></div><div class="world"><div class="ring">
+<div class="world"><div class="ring">
 {cards}
 </div></div><div class="floor"></div></div></foreignObject></svg>
 """
