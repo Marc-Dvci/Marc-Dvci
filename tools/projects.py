@@ -14,9 +14,9 @@ CLUSTERS = {
 
 # hub positions on the board (plane units): related domains sit next to each other
 HUBS = {
-    "science": (-700, -470), "ml": (0, -520), "controls": (720, -470),
+    "science": (-700, -470), "ml": (-90, -610), "controls": (720, -470),
     "systems": (-760, 70), "health": (0, 40), "agents": (760, 70),
-    "consumer": (40, 610), "chain": (780, 600),
+    "consumer": (40, 610), "chain": (760, 540),
 }
 
 # repo, display name, main domain, other domains it belongs to, result (winners only)
