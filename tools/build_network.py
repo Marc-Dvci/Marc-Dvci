@@ -37,8 +37,9 @@ FONT = 13                          # project label size at mid depth, in screen 
 HUB_FONT = 14.5
 HUB_LIFT = 20                      # the domain name sits this far above its glowing core
 GAP = 10                           # space between a project's dot and its label
-ZOOM = 3                           # Shift + wheel zooms the map up to this scale
-CELLS = (7, 6)                     # hover grid that moves the zoom centre to the pointer
+ZOOM = (.55, 3)                    # Shift + wheel zooms the map between these scales
+CELLS = (16, 12)                   # hover grid that moves the zoom centre to the pointer
+GLIDE = "1.1s cubic-bezier(.22,.61,.36,1)"   # how the view follows the pointer while zoomed
 BUTTONS = (124, 120)               # GitHub's zoom and pan buttons cover this much of the bottom right
 INK = "#e6edf3"
 BG = "#0b0f17"
@@ -238,7 +239,9 @@ def mermaid():
     desc = descriptions()
     repos = list(pos)
     keys = list(CLUSTERS)
-    cells = "<em></em>" * (CELLS[0] * CELLS[1])
+    # hover cells, then an <hr>: the HTML parser closes the <p> before it, so it becomes the
+    # scroller's own child, the element the zoom starts on (x1, halfway along the scroll range)
+    cells = "<em></em>" * (CELLS[0] * CELLS[1]) + "<hr>"
     lines = ["flowchart LR", '  bg[" "]:::bg', f'  sky["{cells}"]:::sky'] + [f'  c{q}[" "]:::corner' for q in range(4)]
     css = []
 
@@ -284,9 +287,10 @@ def mermaid():
     css.append(f"[id*=t-bg-],[id*=t-sky-]{{transform:translate({cx:.0f}px,{cy:.0f}px)}}")
     # zoom centre: the hovered cell, mapped so the edge cells zoom on the edges of the board
     C, R = CELLS
+    for i in range(C):
+        css.append(f".nodes:has(em:nth-child({C}n+{i + 1}):hover){{--zx:{x0 + W * i / (C - 1):.0f}px}}")
     for j in range(R):
-        for i in range(C):
-            css.append(f".nodes:has(em:nth-child({j * C + i + 1}):hover){{transform-origin:{x0 + W * i / (C - 1):.0f}px {y0 + H * j / (R - 1):.0f}px}}")
+        css.append(f".nodes:has(em:nth-child(n+{j * C + 1}):nth-child(-n+{(j + 1) * C}):hover){{--zy:{y0 + H * j / (R - 1):.0f}px}}")
 
     for i, k in enumerate(keys):
         hx, hy, hk = hubs[k]
@@ -358,16 +362,18 @@ background-color:#0d1117f2;padding:7px 10px;border:1px solid #30363d;border-left
 .hub .nodeLabel{{transform:translate(-50%,calc(-50% - {HUB_LIFT}px*var(--k)));font:700 calc({HUB_FONT}px*var(--s))/1 {FONTS};letter-spacing:.1em;text-transform:uppercase;color:#fff!important;text-shadow:0 0 8px var(--c),0 0 2px {BG},0 0 5px {BG}}}
 .hub{{transition:opacity .35s {EASE}}}
 a,a:hover,a *,a:hover *{{text-decoration:none!important}}
-.nodes{{timeline-scope:--z;transform-origin:{cx:.0f}px {cy:.0f}px}}
-.nodes a{{transform-origin:inherit}}
-.node{{transform-box:view-box;transform-origin:inherit;transition:opacity .35s {EASE},transform-origin 0s 99999s}}
-.nodes:has(em:hover) .node{{transition:opacity .35s {EASE},transform-origin .6s {EASE}}}
+.nodes{{timeline-scope:--z}}
+.node{{transform-box:view-box;transform-origin:var(--zx,{cx:.0f}px) var(--zy,{cy:.0f}px);transition:opacity .35s {EASE},transform-origin 1ms 99999s}}
+.nodes:has(em:hover) .node{{transition:opacity .35s {EASE},transform-origin {GLIDE}}}
 .node:not(.bg,.sky){{animation:z 1e9s linear both;animation-timeline:--z}}
-@keyframes z{{to{{scale:{ZOOM}}}}}
-@keyframes open{{to{{width:{W:.0f}px;height:{H:.0f}px}}}}
-.sky foreignObject div{{position:absolute!important;left:50%;top:50%;display:block!important;width:0;height:0;animation:open 0s .3s forwards;max-width:none!important;translate:{-W / 2:.0f}px {-H / 2:.0f}px;overflow:scroll hidden!important;direction:rtl;scrollbar-width:none;scroll-timeline:--z x;overscroll-behavior-x:contain}}
-.sky .nodeLabel{{position:static!important;display:block!important;width:{4 * W:.0f}px;height:{H:.0f}px;transform:none!important}}
-.sky .nodeLabel p{{position:sticky;left:0;right:0;direction:ltr;display:grid;grid-template:repeat({CELLS[1]},1fr)/repeat({CELLS[0]},1fr);width:{W:.0f}px;height:{H:.0f}px}}
+@keyframes z{{to{{scale:{ZOOM[1]}}}}}
+@keyframes z2{{0%{{scale:{ZOOM[0]}}}50%{{scale:1}}to{{scale:{ZOOM[1]}}}}}
+@supports (scroll-initial-target:nearest){{.node:not(.bg,.sky){{animation-name:z2}}.sky hr{{scroll-initial-target:nearest;scroll-snap-align:center}}}}
+.sky foreignObject div{{position:absolute!important;left:50%;top:50%;display:block!important;width:0;height:0;max-width:none!important}}
+.sky .nodeLabel{{position:absolute!important;left:0;top:0;display:flex!important;width:{W:.0f}px;height:{H:.0f}px;translate:{-W / 2:.0f}px {-H / 2:.0f}px;transform:none!important;overflow:scroll hidden;direction:rtl;scrollbar-width:none;scroll-timeline:--z x;overscroll-behavior-x:contain}}
+.sky .nodeLabel p{{flex:none;position:sticky;left:0;right:0;direction:ltr;display:grid;grid-template:repeat({CELLS[1]},1fr)/repeat({CELLS[0]},1fr);width:{W:.0f}px;height:{H:.0f}px}}
+.sky hr{{flex:none;width:{W:.0f}px;height:{H:.0f}px;margin:0 {W:.0f}px 0 {2 * W:.0f}px;border:0;padding:0}}
+.sky .nodeLabel hr~p{{display:none}}
 .sky em{{display:block}}
 """
     theme_css = (base + "\n".join(css)).replace("\n", " ")
