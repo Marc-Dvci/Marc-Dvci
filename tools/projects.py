@@ -97,7 +97,7 @@ PROJECTS = [
     ("proof-of-loss", "Proof of Loss", "consumer", ["controls"], None),
     ("handpicked", "Handpicked", "consumer", ["ml"], None),
     ("Understudy", "Understudy", "consumer", ["health"], None),
-    ("Footlight", "Footlight", "consumer", ["health"], None),
+    ("Footlight", "Footlight", "consumer", ["health"], "1st place · Learn AR with SPECS"),
     ("Recall-Me-Maybe", "Recall Me Maybe", "consumer", ["controls"], None),
 ]
 

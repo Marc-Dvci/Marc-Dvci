@@ -25,6 +25,7 @@ in AI competitions.
 |---|---|---|
 | **3rd of 850+ teams** | Google MedGemma Impact Challenge 2026 | [FieldScreen AI](https://github.com/Marc-Dvci/FieldScreen_AI) · [writeup](https://www.kaggle.com/competitions/med-gemma-impact-challenge/writeups/fieldscreen-ai) · [Google blog](https://blog.google/innovation-and-ai/technology/health/med-gemma-impact-challenge/) |
 | **Winner**, EdgeAgent track | Global AI Hackathon with Qwen Cloud (Alibaba) | [LUMEN](https://github.com/Marc-Dvci/LUMEN) · [demo](https://youtu.be/h8hPsUjZMuU) |
+| **1st place** of 216 projects | Learn AR with SPECS (Snap × Devpost) | [Footlight](https://github.com/Marc-Dvci/Footlight) · [demo](https://www.youtube.com/watch?v=wvMXEe9thIY) |
 | **3rd place** | AI4S Open Innovation, Pazhou Algorithm Competition | [Hodgkin's Razor](https://github.com/Marc-Dvci/Hodgkin-s-Razor) · [demo](https://marc-dvci.github.io/Hodgkin-s-Razor/) |
 | **Finalist**, 1 of 6 | European Patent Office CodeFest 2026 | IP Value Framework |
 | **2nd place**, Pro category | Euro-Information Concours de Code 2025 | Python and C++ |
@@ -172,7 +173,7 @@ flowchart LR
   p66["Proof of Loss<i>Turns the photos, receipts and camera events on a UGREEN AI NAS into an insurer-ready claim file after a burglary, flood or fire, with a SHA-256 hash for every exhibit.</i>"]:::pr
   p67["Handpicked<i>See the diamonds you are comparing on your own hand at their listed size, with the price of every face-up square millimetre.</i>"]:::pl
   p68["Understudy<i>Mixed-reality mirror therapy on your own table: the strong hand drives a mirrored hand, and assistance changes finger by finger as movement recovers.</i>"]:::pr
-  p69["Footlight<i>A SPECS Lens for people with Parkinson's who freeze mid-step: lines on the real floor at their step length, and a beat at their walking pace.</i>"]:::pl
+  p69["Footlight<i><b>1st place · Learn AR with SPECS</b>A SPECS Lens for people with Parkinson's who freeze mid-step: lines on the real floor at their step length, and a beat at their walking pace.</i>"]:::wl
   p70["Recall Me Maybe<i>You shouldn't need to know what it's called to know it was recalled.</i>"]:::pr
   h0["Science"]:::hub
   h1["Machine learning"]:::hub

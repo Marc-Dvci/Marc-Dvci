@@ -15,6 +15,7 @@ from projects import CLUSTERS
 RESULTS = [
     ("3rd place", "850+ teams", "FieldScreen AI", "Google MedGemma Impact Challenge", "health"),
     ("Winner, EdgeAgent track", "8k participants", "LUMEN", "Global AI Hackathon with Qwen Cloud", "health"),
+    ("1st place", "216 projects", "Footlight", "Learn AR with SPECS · Snap × Devpost", "consumer"),
     ("3rd place", None, "Hodgkin's Razor", "AI4S Open Innovation · Pazhou Algorithm Competition", "science"),
     ("2nd place", "9k participants", "On the Line", "AWS Agents for Humans · Good Neighbor Agents", "agents"),
     ("2nd place", "10k participants", "Raccord", "Agentic Cinema · Grafana track", "agents"),
