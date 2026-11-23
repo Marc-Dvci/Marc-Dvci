@@ -30,17 +30,25 @@ CARD_W, CARD_H = 300, 222
 STEP_S = 3.2          # seconds per card (move + hold)
 MOVE = 0.28           # share of each step spent turning
 RADIUS = 470
+SLOT_DEG = 36         # angle between neighbouring cards, whatever the number of results
 BG = "#0b0f17"
 FONT = "-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif"
 
 
 def keyframes(n):
-    """One card's path round the ring: hold at each slot, then turn to the next."""
+    """One card's path round the ring: hold at each slot, then turn to the next.
+
+    Neighbours always sit SLOT_DEG apart, so a new result never squeezes the cards together.
+    Only the slots within 90 degrees of the front are visible; a card waiting further back
+    jumps from the far left to the far right while invisible.
+    """
     step = 100 / n
+    slot = max(SLOT_DEG, 360 / n)                           # fewer than 10 cards: a plain ring
     frames = []
     for k in range(n + 1):
-        ang = -360 * k / n
-        a = math.radians(ang % 360)
+        r = (n // 2 - k) % n - n // 2                       # signed slot from the front, negative = left
+        ang = slot * r
+        a = math.radians(ang)
         front = (1 + math.cos(a)) / 2                       # 1 in front, 0 behind
         op = max(0.0, math.cos(a)) ** 1.5                   # back half of the ring is invisible
         bright = 0.35 + 0.65 * front

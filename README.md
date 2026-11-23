@@ -23,15 +23,15 @@ in AI competitions.
 
 | Result | Competition | Project |
 |---|---|---|
-| **3rd of 850+ teams** | Google MedGemma Impact Challenge 2026 | [FieldScreen AI](https://github.com/Marc-Dvci/FieldScreen_AI) · [writeup](https://www.kaggle.com/competitions/med-gemma-impact-challenge/writeups/fieldscreen-ai) · [Google blog](https://blog.google/innovation-and-ai/technology/health/med-gemma-impact-challenge/) |
+| **3rd place** | Google MedGemma Impact Challenge 2026 | [FieldScreen AI](https://github.com/Marc-Dvci/FieldScreen_AI) · [writeup](https://www.kaggle.com/competitions/med-gemma-impact-challenge/writeups/fieldscreen-ai) · [Google blog](https://blog.google/innovation-and-ai/technology/health/med-gemma-impact-challenge/) |
 | **Winner**, EdgeAgent track | Global AI Hackathon with Qwen Cloud (Alibaba) | [LUMEN](https://github.com/Marc-Dvci/LUMEN) · [demo](https://youtu.be/h8hPsUjZMuU) |
-| **1st place** of 216 projects | Learn AR with SPECS (Snap × Devpost) | [Footlight](https://github.com/Marc-Dvci/Footlight) · [demo](https://www.youtube.com/watch?v=wvMXEe9thIY) |
+| **1st place** | Learn AR with SPECS (Snap × Devpost) | [Footlight](https://github.com/Marc-Dvci/Footlight) · [demo](https://www.youtube.com/watch?v=wvMXEe9thIY) |
 | **3rd place** | AI4S Open Innovation, Pazhou Algorithm Competition | [Hodgkin's Razor](https://github.com/Marc-Dvci/Hodgkin-s-Razor) · [demo](https://marc-dvci.github.io/Hodgkin-s-Razor/) |
 | **Finalist**, 1 of 6 | European Patent Office CodeFest 2026 | IP Value Framework |
 | **2nd place**, Pro category | Euro-Information Concours de Code 2025 | Python and C++ |
 | **2nd place**, Good Neighbor Agents track | AWS Agents for Humans Hackathon 2026 | [On the Line](https://github.com/Marc-Dvci/On-the-Line) |
 | **2nd place**, Grafana track | Agentic Cinema Hackathon | [Raccord](https://github.com/Marc-Dvci/Raccord) |
-| **4th of 368** | SLASH: Suspicious Value Transfers in Poker | Coordination detector |
+| **4th place** | SLASH: Suspicious Value Transfers in Poker | Coordination detector |
 | **Finalist**, 1 of 5 | TII OrbitSight Challenge | [OrbitE](https://github.com/Marc-Dvci/orbite-orbitsight) |
 | **Honorable mention** | Tesseract Hackathon 2026 | [Vitrify](https://github.com/Marc-Dvci/Vitrify) |
 
